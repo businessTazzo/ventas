@@ -1,0 +1,9 @@
+$source-endpoint-link-size: 30px;
+$source-endpoint-link-border-size: 2px; // anchor strokeWidth * 2
+
+$target-endpoint-link-size: 30px; // default arrow-wrapper size: 30px (.jtk-endpoint.ussd-target-endpoint)
+$target-endpoint-link-border-size: 2px; // anchor strokeWidth * 2
+$target-endpoint-link-radius: 10px; // arrow-length 10px
+
+$endpoint-text-color-hover: #fff;
+$endpoint-bg-color-hover: #1e8151;

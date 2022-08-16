@@ -1,0 +1,165 @@
+<p-dialog
+    [(visible)]="display"
+    [modal]="true"
+    [closable]="false"
+    [responsive]="true"
+    [contentStyle]="{minHeight: '20vh', minWidth: '55vw'}"
+>
+
+    <ng-template pTemplate="header">
+        <h4 >{{titulo}}</h4>
+    </ng-template>
+    <div style="width: 55vw">
+      <div >
+        <form [formGroup]="forma" (ngSubmit)="registrarUsuario()" action="">
+            <div class="p-fluid grid">
+
+                <div class="p-field col-12  md:col-6">
+                    <label>Usuario</label>
+                    <span class="p-float-label p-input-icon-left">
+                        <i class="pi pi-user"></i>
+                        <ng-container *ngIf="boolShowInputsPass; else elseTemplate">
+                            <input type="text" pInputText formControlName="forDocumento"  [(ngModel)]="documento" id="documento"/>
+                        </ng-container>
+                        <ng-template #elseTemplate>
+                            <input type="text" disabled pInputText formControlName="forDocumento"  [(ngModel)]="documento" id="documento"/>
+                        </ng-template>
+                        <label for="documento">Ingrese usuario</label>
+                    </span>
+                    <small style="color: red;" id="documento" *ngIf="fieldErrors('forDocumento')" class="p-invalid">
+                        {{
+                            (fieldErrors('forDocumento').required==true)?'Ingrese usuario':''
+                        }}
+
+                    </small>
+                </div>
+
+                <div class="p-field col-12  md:col-6">
+                    <label>Correo electrónico</label>
+                    <span class="p-float-label p-input-icon-left">
+                        <i class="pi pi-envelope"></i>
+                        <input type="text" pInputText formControlName="forEmail"  [(ngModel)]="email" id="email" />
+                        <label for="email">Ingrese correo electrónico</label>
+                    </span>
+                    <div *ngIf="fieldErrors('forEmail')">
+                        <small style="color: red;" id="email" class="p-invalid">
+                            {{
+                                (fieldErrors('forEmail').required==true)?'Ingrese correo electrónico':
+                                (fieldErrors('forEmail').email==true)?'Ingrese formato de Email válido':''
+                            }}
+                        </small>
+                    </div>
+
+                </div>
+
+                <div class="p-field col-12  md:col-6">
+                    <label>Nombre</label>
+                    <span class="p-float-label p-input-icon-left">
+                        <i class="pi pi-id-card"></i>
+                        <input type="text" pInputText formControlName="forNombreUsuario"  [(ngModel)]="nombreUsuario" id="nombreUsuario"/>
+                        <label for="nombreUsuario">Ingrese nombre</label>
+                    </span>
+                    <small style="color: red;" id="nombreUsuario" *ngIf="fieldErrors('forNombreUsuario')" class="p-invalid">
+                        {{
+                            (fieldErrors('forNombreUsuario').required==true)?'Ingrese nombre':''
+                        }}
+                    </small>
+                </div>
+
+                <div class="p-field col-12  md:col-6">
+                    <label>Apellido</label>
+                    <span class="p-float-label p-input-icon-left">
+                        <i class="pi pi-id-card"></i>
+                        <input type="text" pInputText formControlName="forApellidoUsuario"  [(ngModel)]="apellidoUsuario" id="apellidoUsuario"/>
+                        <label for="apellidoUsuario">Ingrese apellido</label>
+                    </span>
+                    <small style="color: red;" id="apellidoUsuario" *ngIf="fieldErrors('forApellidoUsuario')" class="p-invalid">
+                        {{
+                            (fieldErrors('forApellidoUsuario').required==true)?'Ingrese apellido':''
+                        }}
+                    </small>
+                </div>
+
+                <div class="p-field col-12  md:col-6" *ngIf="boolShowInputsPass; else elsePass">
+                    <label>Contraseña</label>
+                    <span class="p-float-label p-input-icon-left">
+                        <i class="pi pi-lock"></i>
+                        <input type="password" pInputText formControlName="forContraseña"  [(ngModel)]="passwordUser" id="passwordUser"/>
+                        <label for="passwordUser">Ingrese contraseña</label>
+                    </span>
+                    <small style="color: red;" id="passwordUser" *ngIf="fieldErrors('forContraseña')" class="p-invalid">
+                        {{
+                            (fieldErrors('forContraseña').required==true)?'Ingrese contraseña':
+                            (fieldErrors('forContraseña').hasCapitalCase==true)?'Ingrese al menos una letra mayúscula':
+                            (fieldErrors('forContraseña').hasSmallCase==true)?'Ingrese al menos una letra minúscula':
+                            (fieldErrors('forContraseña').hasNumber==true)?'Ingrese al menos un número':
+                            (
+                            (fieldErrors('forContraseña').minlength!=undefined)
+                                ?(fieldErrors('forContraseña').minlength.actualLength<6)?'Ingrese 6 caracteres como mínimo' : ''
+                                :''
+                            )
+                        }}
+                    </small>
+                </div>
+                <ng-template #elsePass>
+                    <input type="hidden" pInputText formControlName="forContraseña" [(ngModel)]="passwordUser" id="passwordUser"/>
+                </ng-template>
+
+                <div class="p-field col-12  md:col-6" *ngIf="boolShowInputsPass; else elsePass2">
+                    <label>Confirmar Contraseña</label>
+                    <span class="p-float-label p-input-icon-left">
+                        <i class="pi pi-lock"></i>
+                        <input type="password" pInputText formControlName="newForContraseña"  [(ngModel)]="newPasswordUser" id="newPasswordUser"/>
+                        <label for="newPasswordUser">Confirme contraseña</label>
+                    </span>
+                    <small style="color: red;" id="newPasswordUser" *ngIf="forma.errors?.sonDistintas" class="p-invalid">Las contraseñas deben cohincidir</small>
+                </div>
+                <ng-template #elsePass2>
+                    <input type="hidden" pInputText formControlName="newForContraseña"  [(ngModel)]="newPasswordUser" id="newPasswordUser"/>
+                </ng-template>
+
+                <div class="p-field col-12  md:col-6">
+                    <label>Rol</label>
+                    <p-dropdown
+                        formControlName="forRole"
+                        [options]="rolesParametros"
+                        [(ngModel)]="roleSelect"
+                        placeholder="Seleccione Rol"
+                        optionLabel="descripcion"
+                        (onChange)="changeRole($event)"
+                        appendTo="body"
+                    >
+                    </p-dropdown>
+                </div>
+
+                <div class="p-field col-12  md:col-6" *ngIf="boolShowInputStatus">
+                    <label>Estado</label>
+                    <p-selectButton
+                        formControlName="forStatus"
+                        [options]="stateOptions"
+                        [(ngModel)]="status"
+                        optionLabel="label"
+                        optionValue="value">
+                    </p-selectButton>
+                </div>
+            </div>
+            <br>
+            <!-- <div class="col-12  md:col-12">
+                <div class="ui-message ui-messages-error" *ngIf="forma.errors?.sonDistintas">
+                    <i class="fa fa-close"></i>
+                    <p-message severity="error" text="Las contraseñas deben de ser iguales" styleClass="p-mr-2"></p-message>
+                </div>
+            </div> -->
+            <!-- {{forma.errors | json}} -->
+        <!-- </div> -->
+
+            <p-footer style="float: right;">
+                <button pButton type="submit" style="width: 8rem;" icon="pi pi-save" label="Guardar" [disabled]="!forma.valid"></button>
+                <!-- <button style="width: 6rem;" pButton pRipple type="button" icon="pi pi-times" class="p-button-rounded p-button-text" (click)="display=false" label="Cerrar"></button> -->
+                <p-button label="Cerrar" icon="pi pi-times" [style]="{'margin-left': '.5em', 'width': '8rem'}"
+styleClass="p-button-outlined" (click)="display=false"></p-button>
+            </p-footer>
+        </form>
+      </div>
+    </div>
+</p-dialog>

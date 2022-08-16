@@ -1,0 +1,64 @@
+<div class="layout-topbar shadow-4">
+    <div class="layout-topbar-left">
+        <a class="layout-topbar-logo" [routerLink]="['dashboard']">
+            <img id="app-logo" src="../assets/layout/images/logo-light.svg" alt="ultima-layout" style="height: 2.70rem">
+        </a>
+
+        <a class="layout-menu-button shadow-6" (click)="appMain.onMenuButtonClick($event)" pRipple>
+            <i class="pi pi-chevron-right"></i>
+        </a>
+
+        <a class="layout-topbar-mobile-button" (click)="appMain.onTopbarMobileButtonClick($event)" pRipple>
+            <i class="pi pi-ellipsis-v fs-large"></i>
+        </a>
+    </div>
+
+    <div class="layout-topbar-right" [ngClass]="{'layout-topbar-mobile-active': appMain.mobileTopbarActive}">
+        <div class="layout-topbar-actions-left">
+
+        </div>
+        <div class="layout-topbar-actions-right" [ngStyle]="{'margin-right': '1rem'}">
+            <ul class="layout-topbar-items">
+                <li class="layout-topbar-item">
+                    <a  (click)="appMain.onTopbarItemClick($event, 'profile')" [ngStyle]="{'text-align': 'right'}">
+                    <span class="p-d-flex p-flex-column p-mr-2" >
+                        <span class="p-text-bold">telco@hacom-tech.com</span><br>
+                        <small>Administrador</small>
+                    </span>
+                </a>
+                </li>
+                <li class="layout-topbar-item">
+                    <a class="layout-topbar-action flex flex-row justify-content-center align-items-center px-2 rounded-circle" (click)="appMain.onTopbarItemClick($event, 'profile')" pRipple>
+                        <img src="'../assets/layout/images/pages/user-icon.png'" src="../assets/layout/images/pages/user-icon.png" alt="user" style="width: 32px; height: 32px;">
+                    </a>
+
+                    <ul class="layout-topbar-action-panel shadow-6" [@topbarActionPanelAnimation]="'visible'" *ngIf="appMain.activeTopbarItem === 'profile'">
+                        <li class="layout-topbar-action-item">
+                            <a class="flex flex-row align-items-center" pRipple [routerLink]="['/administracion/seguridad']">
+                                <i class="pi pi-cog" [ngClass]="{'mr-2': !app.isRTL, 'ml-2': app.isRTL}"></i>
+                                <span>Seguridad</span>
+                            </a>
+                        </li>
+                        <li class="layout-topbar-action-item">
+                            <a class="flex flex-row align-items-center" pRipple [routerLink]="['/administracion/auditoria']">
+                                <i class="pi pi-file-o" [ngClass]="{'mr-2': !app.isRTL, 'ml-2': app.isRTL}"></i>
+                                <span>Auditoria</span>
+                            </a>
+                        </li>
+                        <li class="layout-topbar-action-item">
+                            <a class="flex flex-row align-items-center" pRipple routerLink="/">
+                                <i class="pi pi-power-off" [ngClass]="{'mr-2': !app.isRTL, 'ml-2': app.isRTL}" [routerLink]="['']"></i>
+                                <span>Cerrar Sesión</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="layout-topbar-item">
+                    <a class="p-d-flex p-flex-row p-ai-center" pRipple title="Salir" >
+                        <i class="pi pi-power-off" [ngStyle]="{'font-size': '2rem'}"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

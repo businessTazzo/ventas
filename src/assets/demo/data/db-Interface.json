@@ -1,0 +1,16 @@
+[
+{"b_db_interfaceid": 1,
+"v_db_interface_name": "perfil_db",
+"v_db_username": "hacomdesarrollo",
+"v_db_password": "rw,.12a",
+"v_db_url": "jdbc:postgresql://192.168.5.129:5432/e7linkussd_db?currentSchema=ussd&sslMode=disable",
+"v_db_driver": "org.postgresql.Driver",
+"t_db_active": true},
+{"b_db_interfaceid": 2,
+"v_db_interface_name": "perfil_db 2",
+"v_db_username": "hacomdesarrollo2",
+"v_db_password": "rw,.12a",
+"v_db_url": "jdbc:postgresql://192.168.5.129:5432/e7linkussd_db?currentSchema=ussd&sslMode=disable",
+"v_db_driver": "org.postgresql.Driver",
+"t_db_active": true}
+]

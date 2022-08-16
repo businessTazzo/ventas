@@ -1,0 +1,14 @@
+{
+    "data": [
+        {"name" :"Encuesta de Satisfaccion","numero":"*102#","estado": true},
+       { "name" :"Pago Servicios","numero":"*504#","estado": true},
+       { "name" :"Consulta Saldo","numero":"*901#","estado": true},
+       { "name" :"Compra de Saldo","numero":"*140#","estado": false},
+       { "name" :"Consulta de Planes","numero":"*130#","estado": true},
+       { "name" :"Paquete Ilimitado","numero":"*215#","estado": true},
+        {"name" :"Paquete Recomendado","numero":"*501#","estado": false},
+        {"name" :"Entretenimiento","numero":"*105#","estado": false},
+        {"name" :"Paquete DATA ILIMITADA","numero":"*101#","estado": true}
+      ]
+    
+}
