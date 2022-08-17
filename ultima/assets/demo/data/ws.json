@@ -1,0 +1,52 @@
+[
+    {
+        "b_ws_wsid": 1, "v_ws_name": "v_ws_name", "v_ws_description": "v_ws_description", "v_ws_headers": "v_ws_headers",
+        "v_ws_url": "http://www.hola.com", "v_ws_method": "POST", "t_ws_tls_active": false, "t_ws_type": 0,
+        "v_ws_json_body": "dataa v_ws_json_body", "v_ws_xml_body": "dataa v_ws_xml_body", "v_ws_error": "dataa v_ws_error", "v_ws_mapping": "dataa v_ws_mapping"
+    },
+    {
+        "b_ws_wsid": 2, "v_ws_name": "v_ws_name", "v_ws_description": "v_ws_description", "v_ws_headers": "v_ws_headers",
+        "v_ws_url": "http://www.hola2.com", "v_ws_method": "POST", "t_ws_tls_active": false, "t_ws_type": 0,
+        "v_ws_json_body": "dataa v_ws_json_body", "v_ws_xml_body": "dataa v_ws_xml_body", "v_ws_error": "dataa v_ws_error", "v_ws_mapping": "dataa v_ws_mapping"
+    },
+    {
+        "b_ws_wsid": 3, "v_ws_name": "v_ws_name", "v_ws_description": "v_ws_description", "v_ws_headers": "v_ws_headers",
+        "v_ws_url": "http://www.hola3.com", "v_ws_method": "POST", "t_ws_tls_active": false, "t_ws_type": 0,
+        "v_ws_json_body": "dataa v_ws_json_body", "v_ws_xml_body": "dataa v_ws_xml_body", "v_ws_error": "dataa v_ws_error", "v_ws_mapping": "dataa v_ws_mapping"
+    },
+    {
+        "b_ws_wsid": 4, "v_ws_name": "v_ws_name", "v_ws_description": "v_ws_description", "v_ws_headers": "v_ws_headers",
+        "v_ws_url": "http://www.hola4.com", "v_ws_method": "POST", "t_ws_tls_active": false, "t_ws_type": 0,
+        "v_ws_json_body": "dataa v_ws_json_body", "v_ws_xml_body": "dataa v_ws_xml_body", "v_ws_error": "dataa v_ws_error", "v_ws_mapping": "dataa v_ws_mapping"
+    },
+    {
+        "b_ws_wsid": 5, "v_ws_name": "v_ws_name", "v_ws_description": "v_ws_description", "v_ws_headers": "v_ws_headers",
+        "v_ws_url": "http://www.hola5.com", "v_ws_method": "POST", "t_ws_tls_active": false, "t_ws_type": 0,
+        "v_ws_json_body": "dataa v_ws_json_body", "v_ws_xml_body": "dataa v_ws_xml_body", "v_ws_error": "dataa v_ws_error", "v_ws_mapping": "dataa v_ws_mapping"
+    },
+    {
+        "b_ws_wsid": 6, "v_ws_name": "v_ws_name", "v_ws_description": "v_ws_description", "v_ws_headers": "v_ws_headers",
+        "v_ws_url": "http://www.hola6.com", "v_ws_method": "POST", "t_ws_tls_active": false, "t_ws_type": 0,
+        "v_ws_json_body": "dataa v_ws_json_body", "v_ws_xml_body": "dataa v_ws_xml_body", "v_ws_error": "dataa v_ws_error", "v_ws_mapping": "dataa v_ws_mapping"
+    },
+    {
+        "b_ws_wsid": 7, "v_ws_name": "v_ws_name", "v_ws_description": "v_ws_description", "v_ws_headers": "v_ws_headers",
+        "v_ws_url": "http://www.hola7.com", "v_ws_method": "POST", "t_ws_tls_active": false, "t_ws_type": 0,
+        "v_ws_json_body": "dataa v_ws_json_body", "v_ws_xml_body": "dataa v_ws_xml_body", "v_ws_error": "dataa v_ws_error", "v_ws_mapping": "dataa v_ws_mapping"
+    },
+    {
+        "b_ws_wsid": 8, "v_ws_name": "v_ws_name", "v_ws_description": "v_ws_description", "v_ws_headers": "v_ws_headers",
+        "v_ws_url": "http://www.hola8.com", "v_ws_method": "POST", "t_ws_tls_active": false, "t_ws_type": 0,
+        "v_ws_json_body": "dataa v_ws_json_body", "v_ws_xml_body": "dataa v_ws_xml_body", "v_ws_error": "dataa v_ws_error", "v_ws_mapping": "dataa v_ws_mapping"
+    },
+    {
+        "b_ws_wsid": 9, "v_ws_name": "v_ws_name", "v_ws_description": "v_ws_description", "v_ws_headers": "v_ws_headers",
+        "v_ws_url": "http://www.hola9.com", "v_ws_method": "POST", "t_ws_tls_active": false, "t_ws_type": 0,
+        "v_ws_json_body": "dataa v_ws_json_body", "v_ws_xml_body": "dataa v_ws_xml_body", "v_ws_error": "dataa v_ws_error", "v_ws_mapping": "dataa v_ws_mapping"
+    },
+    {
+        "b_ws_wsid": 10, "v_ws_name": "v_ws_name", "v_ws_description": "v_ws_description", "v_ws_headers": "v_ws_headers",
+        "v_ws_url": "http://www.hola10.com", "v_ws_method": "POST", "t_ws_tls_active": false, "t_ws_type": 0,
+        "v_ws_json_body": "dataa v_ws_json_body", "v_ws_xml_body": "dataa v_ws_xml_body", "v_ws_error": "dataa v_ws_error", "v_ws_mapping": "dataa v_ws_mapping"
+    }
+]
