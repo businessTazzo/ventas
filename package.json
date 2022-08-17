@@ -33,7 +33,7 @@
         "@jsplumb/connector-bezier": "^5.9.4",
         "@jsplumb/core": "^5.9.4",
         "@jsplumb/util": "^5.9.4",
-        "angular-cli-ghpages": "^1.0.3",
+        "angular-cli-ghpages": "^1.0.0-rc.2",
         "chart.js": "^3.8.0",
         "echarts": "^5.3.3",
         "echarts-for-angular": "^0.4.0",
