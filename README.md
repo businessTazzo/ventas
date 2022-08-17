@@ -1,2 +1,0 @@
-# ventas
-template ventas
