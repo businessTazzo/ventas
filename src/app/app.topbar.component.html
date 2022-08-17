@@ -34,12 +34,6 @@
 
                     <ul class="layout-topbar-action-panel shadow-6" [@topbarActionPanelAnimation]="'visible'" *ngIf="appMain.activeTopbarItem === 'profile'">
                         <li class="layout-topbar-action-item">
-                            <a class="flex flex-row align-items-center" pRipple [routerLink]="['/administracion/seguridad']">
-                                <i class="pi pi-cog" [ngClass]="{'mr-2': !app.isRTL, 'ml-2': app.isRTL}"></i>
-                                <span>Seguridad</span>
-                            </a>
-                        </li>
-                        <li class="layout-topbar-action-item">
                             <a class="flex flex-row align-items-center" pRipple [routerLink]="['/administracion/auditoria']">
                                 <i class="pi pi-file-o" [ngClass]="{'mr-2': !app.isRTL, 'ml-2': app.isRTL}"></i>
                                 <span>Auditoria</span>

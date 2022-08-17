@@ -18,15 +18,20 @@ export class AppMenuComponent implements OnInit {
     ngOnInit() {
         this.model = [
             {
-                label: 'Favoritos', icon: 'pi pi-fw pi-home',
+                label: 'Gráficas',
                 items: [
-                    {label: 'Dashboard', icon: 'pi pi-chart-bar', routerLink: ['/Hacom/dashboard']},
+                    {label: 'Dashboard', icon: 'pi pi-chart-bar', routerLink: ['/Hacom/dashboard']}
+                ]
+            },
+            {
+                label: 'Favoritos',
+                items: [
                     {label: 'Servicio', icon: 'pi pi-th-large', routerLink: ['/Hacom/servicio/create']},
                     {label: 'USSD Create', icon: 'pi pi-th-large', routerLink: ['/Hacom/servicio/ussdcreate']}
                 ]
             },
             {
-                label: 'USSD', icon: 'pi pi-fw pi-home',
+                label: 'USSD',
                 items: [
                     {label: 'Gestión Arbol', icon: 'pi pi-th-large', routerLink: ['/Hacom/ussd/gestionarbol']},
                     // {label: 'Reporteria', icon: 'pi pi-file-o', routerLink: ['/Hacom/ussd/reporteria']},
@@ -37,11 +42,11 @@ export class AppMenuComponent implements OnInit {
                 ]
             },
             {
-                label: 'Administración', icon: 'pi pi-fw pi-home',
+                label: 'Administración',
                 items: [
-                    {label: 'Seguridad', icon: 'pi pi-cog', routerLink: ['/Hacom/administracion/seguridad']},
-                    {label: 'Auditoria', icon: 'pi pi-user-edit', routerLink: ['/Hacom/administracion/auditoria']},
-                    {label: 'usuarios', icon: 'pi pi-user-edit', routerLink: ['/Hacom/administracion/usuarios']}
+                    {label: 'Usuarios', icon: 'pi pi-user-edit', routerLink: ['/Hacom/administracion/usuarios']},
+                    {label: 'Perfiles', icon: 'pi pi-cog', routerLink: ['/Hacom/administracion/perfiles']},
+                    {label: 'Auditoria', icon: 'pi pi-user-edit', routerLink: ['/Hacom/administracion/auditoria']}
                 ]
             },
             {

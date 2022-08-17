@@ -17,7 +17,6 @@ import {CalendarModule} from 'primeng/calendar';
 import {CardModule} from 'primeng/card';
 import {CarouselModule} from 'primeng/carousel';
 import {CascadeSelectModule} from 'primeng/cascadeselect';
-import {ChartModule} from 'primeng/chart';
 import {CheckboxModule} from 'primeng/checkbox';
 import {ChipModule} from 'primeng/chip';
 import {ChipsModule} from 'primeng/chips';
@@ -116,11 +115,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { PipesModule } from './pipes/pipes.module';
-import { EchartsxModule } from 'echarts-for-angular';
 import { MessageService } from 'primeng/api';
-import { UsuariosComponent } from './pages/admin/usuarios/usuarios.component';
-import { ModalUserComponent } from './modules/modal-user/modal-user.component';
-import { HeladosComponent } from './pages/ventas/helados/helados.component';
 
 FullCalendarModule.registerPlugins([
     dayGridPlugin,
@@ -130,7 +125,6 @@ FullCalendarModule.registerPlugins([
 
 @NgModule({
     imports: [
-        EchartsxModule,
         BrowserModule,
         FormsModule,
         AppRoutingModule,
@@ -147,7 +141,6 @@ FullCalendarModule.registerPlugins([
         CardModule,
         CarouselModule,
         CascadeSelectModule,
-        ChartModule,
         CheckboxModule,
         ChipModule,
         ChipsModule,
@@ -162,7 +155,6 @@ FullCalendarModule.registerPlugins([
         DropdownModule,
         FieldsetModule,
         FileUploadModule,
-        FullCalendarModule,
         GalleriaModule,
         ImageModule,
         InplaceModule,
@@ -232,10 +224,7 @@ FullCalendarModule.registerPlugins([
         AppLoginComponent,
         AppNotfoundComponent,
         AppErrorComponent,
-        AppAccessdeniedComponent,
-        UsuariosComponent,
-        ModalUserComponent,
-        HeladosComponent
+        AppAccessdeniedComponent
     ],
     providers: [
         MessageService,

@@ -1,5 +1,5 @@
 [
     { "nombre": "ADMIN", "id": 1, "descripcion": "Administrador"},
-    { "nombre": "ING", "id": 2, "descripcion": "Ingenieria"},
-    { "nombre": "MKT", "id": 3, "descripcion": "Marketing"}
+    { "nombre": "ING", "id": 3, "descripcion": "Ingenieria"},
+    { "nombre": "MKT", "id": 4, "descripcion": "Marketing"}
 ]

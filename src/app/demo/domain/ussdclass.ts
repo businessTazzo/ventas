@@ -1,10 +1,12 @@
+export type UssdDataAddType = "front" | "plugin" | "form";
 export type UssdDataType = "front" | "plugin";
 export type UssdPluginsType = "form" | "link";
 type UssdPluginsParameterType = "in" | "out" | "none";
 
 // import { Position } from "@jsplumb/core";
-// export default interface UssdData extends Partial<Position> {
-export default interface UssdData {
+// export default interface UssdData extends Partial<Position> {}
+
+export interface UssdData {
     id: string; //explicit
     type: UssdDataType; //explicit (front, plugin)
     title?: string; //Optional

@@ -1,0 +1,11 @@
+[
+    {"id": 1, "statusCheckb": true, "label": "Dashboard", "group":{ "name": "Gráficas"}, "access": {"restringido": true, "lectura": false, "creacion": false, "edicion": false, "total": false}},
+    {"id": 2, "statusCheckb": true, "label": "Visualizador de Campañas", "group":{ "name": "Anti-Spam"}, "access": {"restringido": false, "lectura": true, "creacion": false, "edicion": false, "total": false}},
+
+
+    {"id": 5, "statusCheckb": true, "label": "Tracking", "group":{ "name": "Anti-Spam"}, "access": {"restringido": false, "lectura": true, "creacion": false, "edicion": false, "total": false}},
+    {"id": 6, "statusCheckb": true, "label": "Configuración", "group":{ "name": "Anti-Spam"}, "access": {"restringido": true, "lectura": false, "creacion": false, "edicion": false, "total": false}},
+    {"id": 7, "statusCheckb": true, "label": "Large Account", "group":{ "name": "Reportes"}, "access": {"restringido": false, "lectura": false, "creacion": false, "edicion": false, "total": true}},
+    {"id": 8, "statusCheckb": true, "label": "totalizados", "group":{ "name": "Reportes"}, "access": {"restringido": false, "lectura": false, "creacion": false, "edicion": false, "total": true}},
+    {"id": 9, "statusCheckb": true, "label": "TOP Orígenes FP", "group":{ "name": "Reportes"}, "access": {"restringido": false, "lectura": false, "creacion": false, "edicion": false, "total": true}}
+]
